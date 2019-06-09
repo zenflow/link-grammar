@@ -7,7 +7,7 @@ install:
 
 script:
   - ./autogen.sh
-  - ./configure --disable-python-bindings  # TODO: fix tests that fail with python bindings enabled
+  - ./configure
   - make
   - make check
   - sudo make install

@@ -7,11 +7,11 @@ source ./emsdk_env.sh
 popd
 
 pushd ..
-emconfigure ./configure --disable-sat-solver --disable-java-bindings --disable-python-bindings
-emmake make
-emcc -O3 /usr/local/lib/liblink-grammar.so -o liblink-grammar.js
-cat liblink-grammar.js
-popd
+emconfigure ./configure --disable-sat-solver --disable-java-bindings --disable-python-bindings || cat config.log
+# emmake make
+# emcc -O3 /usr/local/lib/liblink-grammar.so -o liblink-grammar.js
+# cat liblink-grammar.js
+# popd
 
 # file PATHTO/.libs/link-parser # result: LLVM IR bitcode
 # mv link-parser link-parser.bc

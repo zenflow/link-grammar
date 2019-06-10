@@ -7,7 +7,7 @@ source ./emsdk_env.sh
 popd
 
 pushd ..
-emconfigure configure --disable-sat-solver --disable-java-bindings --disable-python-bindings
+emconfigure ./configure --disable-sat-solver --disable-java-bindings --disable-python-bindings
 emmake make
 emcc -O3 /usr/local/lib/liblink-grammar.so -o liblink-grammar.js
 cat liblink-grammar.js
